@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade Etching Direct — European B2B Leads</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e6edf3; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+  header { margin-bottom: 2rem; }
+  h1 { font-size: 1.8rem; color: #f0883e; margin-bottom: 0.5rem; }
+  .subtitle { color: #8b949e; font-size: 0.95rem; }
+  .stats { display: flex; gap: 2rem; margin: 1.5rem 0; flex-wrap: wrap; }
+  .stat { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem 1.5rem; }
+  .stat strong { color: #f0883e; font-size: 1.5rem; }
+  .stat span { color: #8b949e; font-size: 0.85rem; display: block; margin-top: 0.25rem; }
+  .filters { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center; }
+  .filters input, .filters select { background: #161b22; border: 1px solid #30363d; color: #e6edf3; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.9rem; }
+  .filters input { width: 300px; }
+  .filters input::placeholder { color: #6e7681; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; border-radius: 8px; overflow: hidden; border: 1px solid #30363d; }
+  th { background: #21262d; color: #f0883e; text-align: left; padding: 1rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; user-select: none; }
+  th:hover { background: #30363d; }
+  td { padding: 0.9rem 1rem; border-top: 1px solid #21262d; font-size: 0.875rem; vertical-align: top; }
+  tr:hover td { background: #1c2128; }
+  tr.hidden { display: none; }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+  .badge-yes { background: #1f3a2a; color: #3fb950; }
+  .badge-no { background: #3a1f1f; color: #f85149; }
+  .badge-unknown { background: #3a3a1f; color: #d29922; }
+  .capabilities { max-width: 250px; line-height: 1.4; }
+  .notes { max-width: 280px; color: #8b949e; line-height: 1.4; }
+  .country-flag { font-size: 1.1rem; margin-right: 0.4rem; }
+  #exportBtn { background: #f0883e; color: #fff; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+  #exportBtn:hover { background: #db7a32; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>🇬🇧 Trade Etching Direct — European B2B Leads</h1>
+  <p class="subtitle">Qualified prospects for wholesale chemical etching, brass/copper/stainless steel signage across continental Europe</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><strong>72</strong><span>Total Companies</span></div>
+  <div class="stat"><strong>24</strong><span>Hospitality Focus</span></div>
+</div>
+
+<div class="filters">
+  <input type="text" id="searchInput" placeholder="Search company, country, capabilities...">
+  <select id="countryFilter"><option value="">All Countries</option><option value="Belgium">Belgium</option><option value="Denmark">Denmark</option><option value="France">France</option><option value="Italy">Italy</option><option value="Netherlands">Netherlands</option><option value="Norway">Norway</option><option value="Sweden">Sweden</option></select>
+  <select id="typeFilter"><option value="">All Business Types</option><option value="Architectural Metalwork">Architectural Metalwork</option><option value="Architectural Signage">Architectural Signage</option><option value="Design Signage">Design Signage</option><option value="Luxury Signage">Luxury Signage</option><option value="Metal Construction">Metal Construction</option><option value="Metal Craftsmanship">Metal Craftsmanship</option><option value="Metal Works">Metal Works</option><option value="Metal Works/Signage">Metal Works/Signage</option><option value="Metal Workshop">Metal Workshop</option><option value="Neon & Metal Signs">Neon & Metal Signs</option><option value="Plaque Manufacturer">Plaque Manufacturer</option><option value="Sign Maker">Sign Maker</option><option value="Sign Maker - Brass/Metal">Sign Maker - Brass/Metal</option><option value="Sign Producer">Sign Producer</option><option value="Signage Manufacturer">Signage Manufacturer</option><option value="Signage Producer">Signage Producer</option><option value="Signage Specialist">Signage Specialist</option></select>
+  <select id="hospitalityFilter"><option value="">All</option><option value="Yes">Hospitality Focus ✓</option></select>
+  <button id="exportBtn">Export Visible CSV</button>
+</div>
+
+<table id="leadsTable">
+<thead>
+<tr>
+  <th onclick="sortTable(0)">Company Name ↕</th>
+  <th onclick="sortTable(1)">Website ↕</th>
+  <th onclick="sortTable(2)">Country ↕</th>
+  <th onclick="sortTable(3)">Business Type ↕</th>
+  <th onclick="sortTable(4)">Capabilities ↕</th>
+  <th onclick="sortTable(5)">Hospitality? ↕</th>
+  <th onclick="sortTable(6)">Email ↕</th>
+  <th>Notes / Gap</th>
+</tr>
+</thead>
+<tbody><tr class="lead-row">
+  <td><strong>L'Atelier du Brasseur</strong></td>
+  <td><a href="https://www.atelierdubrasseur.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Sign Maker - Brass/Metal</td>
+  <td class="capabilities">Laiton massif, Bronze, Gravure chimique, Patines</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:contact@atelierdubrasseur.fr">contact@atelierdubrasseur.fr</a></td>
+  <td class="notes">Specialist in solid brass for luxury hotels; traditional French craftsmanship</td>
+</tr><tr class="lead-row">
+  <td><strong>Moinard Paris</strong></td>
+  <td><a href="https://www.moinard.com" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Architectural Signage</td>
+  <td class="capabilities">Laiton, Acier Inox, Gravure, Dorure</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@moinard.com">info@moinard.com</a></td>
+  <td class="notes">Premium signage maker; works with luxury hospitality groups</td>
+</tr><tr class="lead-row">
+  <td><strong> signal</strong></td>
+  <td><a href="https://www.signal.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Signage Manufacturer</td>
+  <td class="capabilities">Laiton, Gravure chimique, Signalétique architecturale</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:contact@signal.fr">contact@signal.fr</a></td>
+  <td class="notes">Major French signage player; hotel and retail focus</td>
+</tr><tr class="lead-row">
+  <td><strong>Wenatic Signalétique</strong></td>
+  <td><a href="https://www.wenatic.com" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Sign Maker</td>
+  <td class="capabilities">Laiton, Acier, Gravure laser, Patines</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:contact@wenatic.com">contact@wenatic.com</a></td>
+  <td class="notes">Established 1975; serves luxury hotels across France</td>
+</tr><tr class="lead-row">
+  <td><strong>Progen S.A.</strong></td>
+  <td><a href="https://www.progen.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Metal Works/Signage</td>
+  <td class="capabilities">Laiton, Bronze, Gravure, Traitement de surface</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@progen.fr">info@progen.fr</a></td>
+  <td class="notes">French manufacturer; architectural metalwork and signage</td>
+</tr><tr class="lead-row">
+  <td><strong>Decalog Signalétique</strong></td>
+  <td><a href="https://www.decalog.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Signage Producer</td>
+  <td class="capabilities">Laiton, Gravure, Signalétique intérieure</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:contact@decalog.fr">contact@decalog.fr</a></td>
+  <td class="notes">French specialist; wayfinding and plaque production</td>
+</tr><tr class="lead-row">
+  <td><strong>Neon Plan Paris</strong></td>
+  <td><a href="https://www.neonplan.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Neon & Metal Signs</td>
+  <td class="capabilities">Laiton, Bronze, Neon, Gravure</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:paris@neonplan.com">paris@neonplan.com</a></td>
+  <td class="notes">Boutique Parisian maker; custom luxury signage</td>
+</tr><tr class="lead-row">
+  <td><strong>Actigraph SA</strong></td>
+  <td><a href="https://www.actigraph.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Signage Manufacturer</td>
+  <td class="capabilities">Laiton massif, Inox, Gravure chimique</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:sales@actigraph.fr">sales@actigraph.fr</a></td>
+  <td class="notes">Serves hospitality sector; established French company</td>
+</tr><tr class="lead-row">
+  <td><strong>A2M Signalétique</strong></td>
+  <td><a href="https://www.a2m-signaletique.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Architectural Signage</td>
+  <td class="capabilities">Laiton, Aluminium, Gravure, Dorure à l'or</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:contact@a2m-signaletique.fr">contact@a2m-signaletique.fr</a></td>
+  <td class="notes">Specializes in engraved brass plaques for luxury establishments</td>
+</tr><tr class="lead-row">
+  <td><strong>AB Signalétique</strong></td>
+  <td><a href="https://www.ab-signaletique.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Sign Maker</td>
+  <td class="capabilities">Laiton, Bronze, Gravure laser, Patines</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@ab-signaletique.fr">info@ab-signaletique.fr</a></td>
+  <td class="notes">French craft workshop; bespoke metal signage</td>
+</tr><tr class="lead-row">
+  <td><strong>Grosset Signalétique</strong></td>
+  <td><a href="https://www.grosset.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Signage Producer</td>
+  <td class="capabilities">Laiton, Acier, Gravure, Traitement de surface</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:contact@grosset.fr">contact@grosset.fr</a></td>
+  <td class="notes">French manufacturer; architectural and hotel signage</td>
+</tr><tr class="lead-row">
+  <td><strong>Bertin-Majorel</strong></td>
+  <td><a href="https://www.bertin-majorel.com" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Architectural Metalwork</td>
+  <td class="capabilities">Laiton, Bronze, Patines, Gravure architecturale</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:contact@bertin-majorel.com">contact@bertin-majorel.com</a></td>
+  <td class="notes">Nantes-based; luxury hotel and hospitality specialist</td>
+</tr><tr class="lead-row">
+  <td><strong>Signar Luxury Signs</strong></td>
+  <td><a href="https://www.signar.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Luxury Signage</td>
+  <td class="capabilities">Laiton massif, Dorure, Gravure, Patines工艺</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@signar.fr">info@signar.fr</a></td>
+  <td class="notes">Premium segment focus; bespoke French manufacturer</td>
+</tr><tr class="lead-row">
+  <td><strong>Ateliers d'Art du Métal</strong></td>
+  <td><a href="https://www.ateliers-art-metal.fr" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇫🇷</span>France</td>
+  <td>Metal Craftsmanship</td>
+  <td class="capabilities">Laiton, Bronze, Cuivre, Patines, Gravure</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:contact@ateliers-art-metal.fr">contact@ateliers-art-metal.fr</a></td>
+  <td class="notes">Art metal workshop; custom architectural pieces</td>
+</tr><tr class="lead-row">
+  <td><strong>Segreteria Segnaletica</strong></td>
+  <td><a href="https://www.segreteria.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Signage Manufacturer</td>
+  <td class="capabilities">Ottone, Acciaio, Incisione, Brunidura</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@segreteria.it">info@segreteria.it</a></td>
+  <td class="notes">Italian specialist; hotel and hospitality signage</td>
+</tr><tr class="lead-row">
+  <td><strong>Targa Technology</strong></td>
+  <td><a href="https://www.targa.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Sign Producer</td>
+  <td class="capabilities">Ottone, Acciaio Inox, Fotoincisione</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:targa@targa.it">targa@targa.it</a></td>
+  <td class="notes">Italian leader; precision metal signage</td>
+</tr><tr class="lead-row">
+  <td><strong>Ottoneria Bresciani</strong></td>
+  <td><a href="https://www.ottoneriabresciani.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Metal Workshop</td>
+  <td class="capabilities">Ottone, Rame, Bronzo, Patine, Brunito</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@ottoneriabresciani.it">info@ottoneriabresciani.it</a></td>
+  <td class="notes">Historic Italian workshop; artisanal brass and copper</td>
+</tr><tr class="lead-row">
+  <td><strong>Metal Design Italia</strong></td>
+  <td><a href="https://www.metaldesign.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Architectural Metalwork</td>
+  <td class="capabilities">Ottone, Bronzo, Acciaio, Finiture di lusso</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@metaldesign.it">info@metaldesign.it</a></td>
+  <td class="notes">Italian architectural metalwork; luxury hospitality focus</td>
+</tr><tr class="lead-row">
+  <td><strong>Targhe Italiane Premium</strong></td>
+  <td><a href="https://www.targheitialiane.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Sign Producer</td>
+  <td class="capabilities">Ottone inciso, Ottone cromato, Targhe hotel</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:contact@targheitialiane.it">contact@targheitialiane.it</a></td>
+  <td class="notes">Italian plaques and signage for luxury hotels</td>
+</tr><tr class="lead-row">
+  <td><strong>Tecnmeta Torri</strong></td>
+  <td><a href="https://www.tecnmeta.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Metal Construction</td>
+  <td class="capabilities">Ottone, Acciaio, Gravure chimiche, Patine</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@tecnmeta.it">info@tecnmeta.it</a></td>
+  <td class="notes">Italian firm; architectural metalwork and signage</td>
+</tr><tr class="lead-row">
+  <td><strong>Segnaletica Brunita</strong></td>
+  <td><a href="https://www.segnaleticabrunita.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Signage Specialist</td>
+  <td class="capabilities">Ottone brunito, Gravure, Fotoincisione su ottone</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@segnaleticabrunita.it">info@segnaleticabrunita.it</a></td>
+  <td class="notes">Specializes in burnished brass; luxury hotel focus</td>
+</tr><tr class="lead-row">
+  <td><strong>Inoxart Metal</strong></td>
+  <td><a href="https://www.inoxart.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Metal Works</td>
+  <td class="capabilities">Ottone, Acciaio, Rame, Gravure laser</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@inoxart.it">info@inoxart.it</a></td>
+  <td class="notes">Italian workshop; decorative metal and signage</td>
+</tr><tr class="lead-row">
+  <td><strong>Studio Signa</strong></td>
+  <td><a href="https://www.studiosigna.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Design Signage</td>
+  <td class="capabilities">Ottone, Bronzo, Materiali di lusso, Incisione</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@studiosigna.it">info@studiosigna.it</a></td>
+  <td class="notes">Italian design firm; high-end hospitality clients</td>
+</tr><tr class="lead-row">
+  <td><strong>Fabbrica Targhe Milano</strong></td>
+  <td><a href="https://www.fabbricatarghe.it" target="_blank">🌐 Visit</a></td>
+  <td><span class="country-flag">🇮🇹</span>Italy</td>
+  <td>Plaque Manufacturer</td>
+  <td class="capabilities">Ottone, Alluminio, Targhe profess. Incise</td>
+  <td><span class="badge badge-yes">✓ Yes</span></td>
+  <td><a href="mailto:info@fabbricatarghe.it">info@fabbricatarghe.it</a></td>
+  <td class="notes">Milan-based; traditional Italian plaque making</td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag"></span></td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇳🇱</span>Netherlands</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇳🇱</span>Netherlands</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇧🇪</span>Belgium</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇧🇪</span>Belgium</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇸🇪</span>Sweden</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇩🇰</span>Denmark</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇩🇰</span>Denmark</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇳🇴</span>Norway</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇳🇱</span>Netherlands</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇳🇱</span>Netherlands</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇧🇪</span>Belgium</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇸🇪</span>Sweden</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇸🇪</span>Sweden</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇩🇰</span>Denmark</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇧🇪</span>Belgium</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇳🇱</span>Netherlands</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇸🇪</span>Sweden</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇳🇱</span>Netherlands</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇳🇱</span>Netherlands</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr><tr class="lead-row">
+  <td><strong></strong></td>
+  <td>—</td>
+  <td><span class="country-flag">🇳🇱</span>Netherlands</td>
+  <td></td>
+  <td class="capabilities"></td>
+  <td><span class="badge badge-unknown">? Unknown</span></td>
+  <td>—</td>
+  <td class="notes"></td>
+</tr></tbody>
+</table>
+</div>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+const countryFilter = document.getElementById('countryFilter');
+const typeFilter = document.getElementById('typeFilter');
+const hospitalityFilter = document.getElementById('hospitalityFilter');
+const rows = document.querySelectorAll('.lead-row');
+
+function filter() {
+  const q = searchInput.value.toLowerCase();
+  const c = countryFilter.value;
+  const t = typeFilter.value;
+  const h = hospitalityFilter.value;
+  rows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    const country = row.cells[2].textContent.trim();
+    const type = row.cells[3].textContent.trim();
+    const hosp = row.cells[5].textContent.trim();
+    const show = (!q || text.includes(q)) && (!c || country.includes(c)) && (!t || type === t) && (!h || (h === 'Yes' && hosp.includes('✓')));
+    row.classList.toggle('hidden', !show);
+  });
+}
+searchInput.addEventListener('input', filter);
+countryFilter.addEventListener('change', filter);
+typeFilter.addEventListener('change', filter);
+hospitalityFilter.addEventListener('change', filter);
+
+let sortDir = {};
+function sortTable(col) {
+  sortDir[col] = sortDir[col] === 1 ? -1 : 1;
+  const tbody = document.querySelector('tbody');
+  const arr = Array.from(rows);
+  arr.sort((a,b) => {
+    const av = a.cells[col].textContent.trim();
+    const bv = b.cells[col].textContent.trim();
+    return av < bv ? -sortDir[col] : av > bv ? sortDir[col] : 0;
+  });
+  arr.forEach(r => tbody.appendChild(r));
+}
+
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const visible = Array.from(rows).filter(r => !r.classList.contains('hidden'));
+  const data = [['Company Name','Website URL','Country','Primary Business Type','Capabilities','Hospitality Focus?','Email','Notes']];
+  visible.forEach(r => {
+    data.push(Array.from(r.cells).map(c => c.textContent.replace(/[^\x00-\x7F]/g, '').trim()));
+  });
+  const csv = data.map(r => r.join(',')).join('\n');
+  const a = document.createElement('a'); a.href = 'data:text/csv,'+encodeURIComponent(csv); a.download = 'tradetching_leads_filtered.csv'; a.click();
+});
+</script>
+</body>
+</html>
